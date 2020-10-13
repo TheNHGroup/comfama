@@ -4,7 +4,7 @@ $(() => {
     } else {
         $('#user').html(window.sessionStorage.getItem('session'));
         var data = { 'GET': 'metricas', 'user': window.sessionStorage.getItem('session') };
-        fetch('https://script.google.com/macros/s/AKfycby5P-TIbNfGiNX61hTIkXIF6MUkR4cPBTHIre0vkxzoXtRmRW8/exec?data=' + encodeURI(JSON.stringify(data)))
+        fetch('https://script.google.com/macros/s/AKfycbwAs8LOqvBDTg1duzKkLQCoVSRPyTp8ytqldlDB2a_5ceV3ACI/exec?data=' + encodeURI(JSON.stringify(data)))
             .then((x) => {
                 x.text().then((tx) => {
                     $('#metricas').html('Casos ' + tx)
@@ -12,7 +12,7 @@ $(() => {
             })
 
         var data = { 'GET': 'caso', 'user': window.sessionStorage.getItem('session') };
-        fetch('https://script.google.com/macros/s/AKfycby5P-TIbNfGiNX61hTIkXIF6MUkR4cPBTHIre0vkxzoXtRmRW8/exec?data=' + encodeURI(JSON.stringify(data)))
+        fetch('https://script.google.com/macros/s/AKfycbwAs8LOqvBDTg1duzKkLQCoVSRPyTp8ytqldlDB2a_5ceV3ACI/exec?data=' + encodeURI(JSON.stringify(data)))
             .then((x) => {
                 x.text().then((tx) => {
                     tx = JSON.parse(tx);
@@ -50,7 +50,7 @@ const norm = (e) => {
         cc = JSON.parse(JSON.stringify(cc).toUpperCase())
 
         var data = { 'PUT': { 'where': 'cierra' }, 'user': window.sessionStorage.getItem('session'), 'data': cc, 'caso': caso[11] };
-        fetch('https://script.google.com/macros/s/AKfycby5P-TIbNfGiNX61hTIkXIF6MUkR4cPBTHIre0vkxzoXtRmRW8/exec?data=' + encodeURI(JSON.stringify(data)))
+        fetch('https://script.google.com/macros/s/AKfycbwAs8LOqvBDTg1duzKkLQCoVSRPyTp8ytqldlDB2a_5ceV3ACI/exec?data=' + encodeURI(JSON.stringify(data)))
             .then((x) => {
                 x.text().then((tx) => {
                     if (tx == 'okok') {
@@ -66,7 +66,7 @@ const norm = (e) => {
         cc = JSON.parse(JSON.stringify(cc).toUpperCase())
 
         var data = { 'PUT': { 'where': 'nl' }, 'user': window.sessionStorage.getItem('session'), 'data': cc, 'caso': caso[11] };
-        fetch('https://script.google.com/macros/s/AKfycby5P-TIbNfGiNX61hTIkXIF6MUkR4cPBTHIre0vkxzoXtRmRW8/exec?data=' + encodeURI(JSON.stringify(data)))
+        fetch('https://script.google.com/macros/s/AKfycbwAs8LOqvBDTg1duzKkLQCoVSRPyTp8ytqldlDB2a_5ceV3ACI/exec?data=' + encodeURI(JSON.stringify(data)))
             .then((x) => {
                 x.text().then((tx) => {
                     if (tx == 'okok') {
@@ -86,7 +86,7 @@ const norm = (e) => {
         cc = JSON.parse(JSON.stringify(cc).toUpperCase())
 
         var data = { 'PUT': { 'where': 'reporte' }, 'user': window.sessionStorage.getItem('session'), 'data': cc, 'coment': coment, 'caso': caso[11] };
-        fetch('https://script.google.com/macros/s/AKfycby5P-TIbNfGiNX61hTIkXIF6MUkR4cPBTHIre0vkxzoXtRmRW8/exec?data=' + encodeURI(JSON.stringify(data)))
+        fetch('https://script.google.com/macros/s/AKfycbwAs8LOqvBDTg1duzKkLQCoVSRPyTp8ytqldlDB2a_5ceV3ACI/exec?data=' + encodeURI(JSON.stringify(data)))
             .then((x) => {
                 x.text().then((tx) => {
                     if (tx == 'okok') {
@@ -107,10 +107,15 @@ const norm = (e) => {
 
         if (JSON.stringify(cc) != JSON.stringify(caso)) {
             var data = { 'PUT': { 'where': 'know' }, 'user': window.sessionStorage.getItem('session'), 'data': cc, 'antdata': caso, 'sol': e.target.elements.choose.value };
-            fetch('https://script.google.com/macros/s/AKfycby5P-TIbNfGiNX61hTIkXIF6MUkR4cPBTHIre0vkxzoXtRmRW8/exec?data=' + encodeURI(JSON.stringify(data)))
+            fetch('https://script.google.com/macros/s/AKfycbwAs8LOqvBDTg1duzKkLQCoVSRPyTp8ytqldlDB2a_5ceV3ACI/exec?data=' + encodeURI(JSON.stringify(data)))
         }
 
     }
 
 
 }
+
+
+
+
+

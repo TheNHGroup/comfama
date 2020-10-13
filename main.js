@@ -4,7 +4,7 @@ if(window.sessionStorage.getItem('session')){
 }
 
     var data = { 'GET': 'users' };
-    fetch('https://script.google.com/macros/s/AKfycby5P-TIbNfGiNX61hTIkXIF6MUkR4cPBTHIre0vkxzoXtRmRW8/exec?data=' + encodeURI(JSON.stringify(data)))
+    fetch('https://script.google.com/macros/s/AKfycbwAs8LOqvBDTg1duzKkLQCoVSRPyTp8ytqldlDB2a_5ceV3ACI/exec?data=' + encodeURI(JSON.stringify(data)))
         .then((x) => {
             x.text().then((tx) => {
                 tx = JSON.parse(tx)
@@ -27,7 +27,7 @@ const comenzar = (e) => {
             alert('COLOCAR NOMBRE DEL ANALISTA')
         } else {
             var data = { 'PUT': { 'where': 'users', 'data': otroname } };
-            fetch('https://script.google.com/macros/s/AKfycby5P-TIbNfGiNX61hTIkXIF6MUkR4cPBTHIre0vkxzoXtRmRW8/exec?data=' + encodeURI(JSON.stringify(data)))
+            fetch('https://script.google.com/macros/s/AKfycbwAs8LOqvBDTg1duzKkLQCoVSRPyTp8ytqldlDB2a_5ceV3ACI/exec?data=' + encodeURI(JSON.stringify(data)))
                 .then((x) => {
                     x.text().then((tx) => {
                         if (tx == 'okok') {
